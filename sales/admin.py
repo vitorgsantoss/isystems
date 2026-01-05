@@ -10,3 +10,5 @@ class SaleItemInline(admin.TabularInline):
 @admin.register(Sale)
 class SaleAdmin(admin.ModelAdmin):
     inlines = [SaleItemInline]
+    exclude = 'value',
+    list_display = 'tenant', 'payment_method', 'value'

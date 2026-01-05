@@ -6,6 +6,8 @@ SECRET_KEY = 'django-insecure-5pu7d%8e7oeh7=umf#n$xuzm=_j!$u)1c&l&c6gxwtq$e&sif5
 DEBUG = True
 ALLOWED_HOSTS = []
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -83,7 +85,7 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'global' / 'static'
+    BASE_DIR / 'global'
 ]
 
 MEDIA_URL = 'media/'

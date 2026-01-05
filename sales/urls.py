@@ -1,12 +1,9 @@
-
 from django.urls import path
-# from tenants.views import home
+from sales.views import CreateSalePDV
 
 
 app_name = 'sales'
 
 urlpatterns = [
-    # path('', home, name='home'),
-
-] 
-
+    path('pdv/', CreateSalePDV.as_view(), name='pdv'),
+]

@@ -1,0 +1,22 @@
+{% extends 'base_template.html' %}
+{% load static %}
+{% block content %}
+<div class="sale-container">
+    {% include "partials/desks.html" %}
+    {% include "partials/list_products.html" %}
+    <div class="sale-resume container">
+        <h2>Resumo da compra:</h2>
+        <div class="sale-items"></div>
+        <div class="total">
+            <h3>Total: </h3>
+            <p>R$ 00,00</p>
+        </div>
+        <div class="sale-options">
+            <button class="print-sale">Imprimir Items</button>
+            <button class="finish-sale">Finalizar Venda</button>
+            <button class="delete-sale">Cancelar Venda</button>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/product-filter.js' %}"></script>
+{% endblock content %}

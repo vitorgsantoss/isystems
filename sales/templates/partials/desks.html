@@ -1,0 +1,15 @@
+{% load static %}
+<div class="desks-container container">
+    <div class="search">
+        <input type="text" name="desks">
+    </div>
+    <div class="grid">
+        {% for desk in desks %}
+        <div class="desk desk-{% if desk.is_open %}occupied{% else %}available{% endif %}">
+            <img src="{% static 'images/table.png' %}" alt="desk image">
+            <h3>{{desk.number}}</h3>
+            <p>{% if desk.is_open %}Ocupada{% else %}Disponível{% endif %}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,9 +1,9 @@
 from django.contrib import admin
-from tenants.models import Tenant, Adress
+from tenants.models import Tenant, Address
 
 
 class AdressInline(admin.TabularInline):
-    model = Adress
+    model = Address
     extra = 1
 
 

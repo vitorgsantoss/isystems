@@ -1,0 +1,21 @@
+{% load static %}
+<div class="sale-panel container">
+        <div class="search">
+            <input name="products" type="text">
+            <div class="categories">
+                {% for category in categories %}
+                        <button>{{category.name}}</button>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="grid products-container">
+            {% for product in products %}
+            <div class="product {{ product.category.name|lower }}">
+                <img src="{% static 'images/hamburguer.png' %}" alt="product image">
+                <p>{{product.name}}</p>
+                <p>{{product.value}}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
